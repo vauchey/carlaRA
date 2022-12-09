@@ -44,6 +44,7 @@ sudo apt-get update
 #lister les carla apt-cache madison carla-simulator (rajoute 17Go)
 
 sudo apt-get install carla-simulator=0.9.13
+sudo apt-get install carla-simulator=0.9.11
 
 pip3 install --upgrade pip
 
