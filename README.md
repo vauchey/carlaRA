@@ -30,7 +30,6 @@ sudo apt update
 sudo apt upgrade
 
 sudo apt install ros-rolling-desktop
-
 sudo apt install ros-dev-tools
 
 
@@ -80,3 +79,8 @@ docker build --build-arg EPIC_USER=vauchey --build-arg EPIC_PASS=ghp_wCmfGwuZzUI
 
 docker build -t carla -f Carla.Dockerfile .
 docker build -t relaxed_babbage -f Carla.Dockerfile .
+
+
+# creation d'un asset
+https://carla.readthedocs.io/en/latest/tuto_A_add_props/
+https://carla.readthedocs.io/en/latest/tuto_A_create_standalone/

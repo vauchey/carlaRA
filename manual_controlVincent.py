@@ -215,10 +215,10 @@ class World(object):
         for blueprint in blueprintsTmp:
             print(blueprint.id)
             for attr in blueprint:
-                print('  - {}'.format(attr))
-                
-        myBlueprint = blueprint_library.find('static.prop.barrier2')#static.prop.box02#static.prop.garbage01 #static.prop.barrier1 static.prop.barrier2
-        transform = carla.Transform(carla.Location(x=28.4, y=-4.1, z=6.0), carla.Rotation(yaw=90))
+                pass#print('  - {}'.format(attr))
+        #static.prop.chainbarrier  static.prop.turret, , static.prop.palette, static.prop.armoredcar,static.prop.house, static.prop.warehouse static.prop.Warehousevv static.prop.warehousevv
+        myBlueprint = blueprint_library.find('static.prop.hangarvv2')#static.prop.box02#static.prop.garbage01 #static.prop.barrier1 static.prop.barrier2
+        transform = carla.Transform(carla.Location(x=28.4, y=-4.1, z=500.0), carla.Rotation(yaw=90))
         actor = self.world.spawn_actor(myBlueprint, transform)
         print ("sensor get done")
         

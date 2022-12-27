@@ -17,14 +17,13 @@ USER carla
 #git clone https://github.com/carla-simulator/carla.git
 
 """
-sudo apt-get update &&
+sudo apt-get update
 sudo apt upgrade
-#sudo apt-get install wget software-properties-common &&
-#sudo add-apt-repository ppa:ubuntu-toolchain-r/test &&
-#wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - &&
-#sudo apt-add-repository "deb http://apt.llvm.org/$(lsb_release -c --short)/ llvm-toolchain-$(lsb_release -c --short)-8 main" &&
-#sudo apt-get update#
+
+
+#on commence par installer les premier spacuqers
 sudo apt-get install build-essential clang-8 lld-8 g++-7 cmake ninja-build libvulkan1 python python-pip python-dev python3-dev python3-pip 
+#on rajoute le necessaire pour les autres paquets
 sudo apt-get install wget software-properties-common 
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 #enlever libpng16-dev
@@ -51,7 +50,7 @@ git apply UE4_patch_vulkan.patch UE4_patch_wheels.patch
 ./Setup.sh 
 ./GenerateProjectFiles.sh 
 cd ~/UnrealEngine_4.24/Engine/Binaries/Linux && ./UE4Editor
-
+si ca marche pas  au second appel ./UE4Editor ~/carla/Unreal/CarlaUE4/CarlaUE4.uproject
 
 cd
 git clone https://github.com/carla-simulator/carla
@@ -62,6 +61,9 @@ git checkout 0.9.11
 export UE4_ROOT=~/UnrealEngine_4.24
 
 make PythonAPI
+#il y a souvent un probleme de telechargement de pacquet xerces https://github.com/carla-simulator/carla/issues/5846
+#nano -w Util/BuilldTools/Setup.sh
+#XERCESC_REPO=https://archive.apache.org/dist/xerces/c/3/sources/xerces-c-${XERCESC_VERSION}.tar.gz
 make launch
 
 """
